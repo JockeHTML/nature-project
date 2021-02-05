@@ -1,0 +1,97 @@
+.sectionOne {
+  display: flex;
+  padding: 0rem 0 4rem 0;
+  border-bottom: 1px solid var(--lightgrey);
+  margin: auto;
+}
+
+#containerOne {
+  margin: auto;
+}
+
+.sectionOne h1 {
+  color: var(--dark);
+}
+
+.sectionOne a {
+  padding: 1rem;
+  background-color: transparent;
+  border: 1px solid var(--lightgrey);
+  border-radius: 5px;
+  width: 200px;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+  text-decoration: none;
+  color: var(--bg);
+  cursor: pointer;
+  transition: all 350ms;
+  color: var(--bg);
+}
+
+.sectionOne a:hover {
+  background-color: var(--bg);
+  color: var(--white);
+}
+
+.button {
+  margin: 4rem 0;
+}
+
+.content {
+  width: 70%;
+}
+
+.image img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50vh;
+  border: 1px var(--lightgrey) solid;
+  padding: 10px;
+  object-position: center;
+  object-fit: cover;
+}
+
+.image {
+  margin-left: 5rem;
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .image img {
+    width: 270px;
+    height: 270px;
+  }
+  .image {
+    margin-left: 1rem;
+  }
+
+  .content p {
+    font-size: 1.2rem;
+  }
+  .button {
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionOne {
+    flex-direction: column-reverse;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .image {
+    margin-left: 0rem;
+  }
+  .image img {
+    width: 250px;
+    height: 250px;
+  }
+  .content {
+    width: 90%;
+    text-align: center;
+  }
+  .sectionOne a {
+    font-size: 1.2rem;
+  }
+}

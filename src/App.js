@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
+import styles from './App.css';
+import Home from "./Components/Home/Home";
+import About from "./Components/About/About";
+import Contact from "./Components/Contact/Contact";
+import ProductContent from "./Components/Products/ProductContent";
+import Menu from "./Components/Menu/Menu";
 
 function App() {
+
+  const [ click, setClick ] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div>
+    <Router>
+      <Menu setClick={setClick} click={click} />
+        <div className={styles.App}>
+          <Switch>
+            <Route path="/about">
+              <About click={click} setClick={setClick} />
+            </Route>
+            <Route path="/contact">
+              <Contact click={click} setClick={setClick} />
+            </Route>
+            <Route path="/products">
+              <ProductContent click={click} setClick={setClick} />
+            </Route>
+            <Route path="/">
+              <Home click={click} setClick={setClick} />
+            </Route>
+            <Route path="/home">
+              <Home click={click} setClick={setClick} />
+            </Route>
+          </Switch>
+        </div>
+    </Router>      
+  </div>
   );
 }
 

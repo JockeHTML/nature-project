@@ -1,0 +1,156 @@
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px 5px 0 0;
+  height: auto;
+  width: 70%;
+  background-color: var(--white);
+  padding: 2rem 0 0 0;
+  margin: auto;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  padding: 0 0 2rem 0;
+}
+
+#box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.9rem 0;
+  cursor: pointer;
+  width: 160px;
+}
+
+#box i {
+  font-size: 3rem;
+}
+
+#box h2 {
+  font-size: 1.5rem;
+  padding-top: 10px;
+}
+
+#box h2,
+#box p,
+#box i {
+  margin: 0 !important;
+  color: var(--white);
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+}
+
+.container h2 {
+  padding-top: 2rem;
+  color: var(--grey);
+}
+
+#form {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: auto !important;
+  padding: 0 0 4rem 0;
+  width: 100%;
+  flex-direction: column;
+}
+
+#form input {
+  width: 300px;
+  height: 30px;
+}
+
+#form input,
+textarea {
+  font-size: 1.1rem;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 5px;
+  border: 2px solid var(--lightgrey);
+  outline: none;
+  font-family: sans-serif;
+  color: var(--grey);
+  font-weight: lighter;
+}
+
+#form textarea {
+  width: 634px;
+  height: 300px;
+}
+
+#form form {
+  margin: auto;
+}
+
+.button button {
+  padding: 1rem;
+  background-color: transparent;
+  border: 1px solid var(--lightgrey);
+  border-radius: 5px;
+  width: 200px;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+  text-decoration: none;
+  color: var(--bg);
+  cursor: pointer;
+  transition: all 350ms;
+  color: var(--bg);
+  margin: 5px;
+}
+
+.button button:hover {
+  color: var(--white);
+  background-color: var(--bg);
+}
+
+@media (max-width: 768px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+  #box {
+    margin: auto;
+    width: 250px;
+  }
+  .name {
+    flex-direction: column;
+    display: flex;
+  }
+  .contact {
+    padding: 1rem;
+  }
+  #form input {
+    width: 90%;
+  }
+  #form textarea {
+    width: 90%;
+    height: 250px;
+  }
+  #form {
+    padding: 0;
+  }
+  .button {
+    text-align: center;
+  }
+  .button button {
+    font-size: 1.2rem;
+    width: 150px;
+  }
+}

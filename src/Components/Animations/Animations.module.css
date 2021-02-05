@@ -1,0 +1,66 @@
+@keyframes fadeAndScale {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeAndScaleIn {
+  0% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeInOne {
+  animation: fadeAndScaleIn 1000ms ease-in;
+  animation-delay: -0.2s;
+  transform-origin: center bottom;
+}
+
+.fadeInTwo {
+  animation: fadeAndScaleIn 1250ms ease-in;
+  animation-delay: -0.2s;
+  transform-origin: center bottom;
+}
+
+.fadeInThree {
+  animation: fadeAndScaleIn 1500ms ease-in;
+  animation-delay: -0.2s;
+  transform-origin: center bottom;
+}
+
+.fadeOutOne {
+  animation: fadeAndScale 1500ms ease-out;
+  animation-delay: -0.2s;
+  transform-origin: center bottom;
+}
+
+.fadeOutTwo {
+  animation: fadeAndScale 1250ms ease-out;
+  transform-origin: center bottom;
+}
+
+.fadeOutThree {
+  animation: fadeAndScale 1000ms ease-out;
+  transform-origin: center bottom;
+}
